@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="890.0" prefWidth="1315.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.wikimedievalsenac.Controllers.HomeController">
+   <bottom>
+        <VBox fx:id="footer" prefHeight="103.0" prefWidth="948.0" style="-fx-background-color: gray;">
+         <children>
+            <SplitPane dividerPositions="0.4683929931454684" prefHeight="160.0" prefWidth="200.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="101.0" prefWidth="633.0">
+                     <children>
+                        <HBox layoutX="14.0" layoutY="1.0" prefHeight="100.0" prefWidth="107.0">
+                           <children>
+                              <Label prefHeight="47.0" prefWidth="107.0" text="Contatos">
+                                 <HBox.margin>
+                                    <Insets top="25.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <VBox layoutX="162.0" layoutY="11.0" prefHeight="78.0" prefWidth="96.0">
+                           <children>
+                              <HBox prefHeight="27.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../img/instagram.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label prefHeight="18.0" prefWidth="89.0" text="Instagram">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="29.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../img/facebook.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label prefHeight="18.0" prefWidth="89.0" text="Facebook">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="26.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="23.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../img/gmail.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Email">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <opaqueInsets>
+                              <Insets top="10.0" />
+                           </opaqueInsets>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="154.0" prefWidth="667.0" />
+              </items>
+            </SplitPane>
+         </children></VBox>
+    </bottom>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+   <top>
+      <HBox prefHeight="71.0" prefWidth="1315.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="90.0" prefWidth="111.0">
+               <children>
+                  <ImageView fitHeight="47.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../img/logo.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="30.0" top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="90.0" prefWidth="209.0">
+               <children>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" />
+                  <Label prefHeight="28.0" prefWidth="196.0" text="Wiki Medieval">
+                     <HBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="DejaVu Sans Mono Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Pane prefHeight="71.0" prefWidth="206.0" />
+            <HBox prefHeight="46.0" prefWidth="563.0" spacing="10.0">
+               <children>
+                  <Button text="Home" onAction="#handleHome"/>
+                  <Button text="Explorar" onAction="#handleExplorar"/>
+                  <Button text="Contato" onAction="#handleContact"/>
+                  <Button text="Login" onAction="#handleLogin"/>
+                  <TextField fx:id="searchField" promptText="Pesquisar..." onAction="#handleSearch"/>
+                  <ImageView fitHeight="26.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../img/lupa.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets top="25.0" />
+               </HBox.margin>
+            </HBox>
+            <HBox prefHeight="72.0" prefWidth="206.0">
+               <children>
+                  <Label prefHeight="63.0" prefWidth="127.0" text="Rafaella Marques">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../img/persona.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <Pane prefHeight="646.0" prefWidth="1315.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="341.0" fitWidth="1322.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../img/banner.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
