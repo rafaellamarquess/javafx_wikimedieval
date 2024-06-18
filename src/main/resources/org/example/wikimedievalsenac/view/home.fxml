@@ -123,11 +123,11 @@
             <Pane prefHeight="71.0" prefWidth="206.0" />
             <HBox prefHeight="46.0" prefWidth="563.0" spacing="10.0">
                <children>
-                  <Button text="Home" onAction="#handleHome"/>
-                  <Button text="Explorar" onAction="#handleExplorar"/>
-                  <Button text="Contato" onAction="#handleContact"/>
-                  <Button text="Login" onAction="#handleLogin"/>
-                  <TextField fx:id="searchField" promptText="Pesquisar..." onAction="#handleSearch"/>
+                  <Button onAction="#handleHome" text="Home" />
+                  <Button onAction="#handleBuscaMidia" text="Busca" />
+                  <Button onAction="#handleContact" text="Contato" />
+                  <Button fx:id="login" onAction="#handleLogin" text="Login" />
+                  <TextField fx:id="searchField" onAction="#handleSearch" promptText="Pesquisar..." />
                   <ImageView fitHeight="26.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../img/lupa.png" />

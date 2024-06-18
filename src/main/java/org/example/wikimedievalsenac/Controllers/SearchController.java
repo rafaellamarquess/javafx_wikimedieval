@@ -4,6 +4,8 @@ package org.example.wikimedievalsenac.Controllers;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import org.example.wikimedievalsenac.HelloApplication;
+import java.io.IOException;
 
 
 public abstract class SearchController extends Application {
@@ -14,16 +16,13 @@ public abstract class SearchController extends Application {
 
     @FXML
     private TextField searchField;
-    @FXML
-    private ListView<String> resultadoListView;
 
     @FXML
-    protected void handleSearch() {
+    protected void handleSearch() throws IOException {
         String searchTerm = searchField.getText();
-        // Adicione a lógica de busca aqui
-        System.out.println("Buscando por: " + searchTerm);
-        // Exemplo de resultado
-        resultadoListView.getItems().add("Resultado para: " + searchTerm);
+        // Redireciona para a página de resultado da pesquisa
+        System.out.println("Pesquisando por: " + searchTerm);
+        HelloApplication.setRoot("resultado_pesquisa");
     }
 
 }

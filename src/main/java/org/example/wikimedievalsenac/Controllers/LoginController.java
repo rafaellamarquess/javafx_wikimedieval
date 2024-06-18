@@ -4,31 +4,27 @@ import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
+
 public class LoginController {
 
     @FXML
     private TextField emailField;
+
     @FXML
     private PasswordField senhaField;
 
-    public LoginController(TextField emailField, PasswordField senhaField) {
-        this.emailField = emailField;
-        this.senhaField = senhaField;
+    @FXML
+    protected void handlebuttonLogin() {
+        String email = emailField.getText();
+        String senha = senhaField.getText();
+        // Aqui você pode adicionar a lógica de autenticação
+        System.out.println("Tentando login com email: " + email + " e senha: " + senha);
     }
 
     @FXML
-    protected void handleLogin() {
-        String email = emailField.getText();
-        String senha = senhaField.getText();
-        // Adicione a lógica de autenticação aqui
-        System.out.println("Login com email: " + email);
-    }
-
-    @FXML
-    protected void handleRegister() {
-        String email = emailField.getText();
-        String senha = senhaField.getText();
-        // Adicione a lógica de registro aqui
-        System.out.println("Registro com email: " + email);
+    protected void handlebuttonRegister() {
+        // Lógica para registrar um novo usuário
+        System.out.println("Registrando um novo usuário");
     }
 }
+
